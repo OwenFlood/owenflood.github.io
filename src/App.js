@@ -1,6 +1,10 @@
 import './App.css';
 
 function App() {
+  const panelWide = 350
+  const panelSmall = 200
+  const panelHeight = 100
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +14,20 @@ function App() {
       <div className="App-body">{/* <p>MEEEE</p> */}</div>
 
       <img src="headshot.png" alt="frame" className="headshot" />
+
+      <div className="control-panel-wrapper">
+        <svg className="control-panel-svg">
+          <polygon
+            points={
+              `0,0 ` + // Top Left
+              `${panelWide},0 ` + // Top Right
+              `${panelWide / 2 + panelSmall / 2},${panelHeight} ` + // Bottom Right
+              `${panelWide / 2 - panelSmall / 2},${panelHeight} ` // Bottom Left
+            }
+            className="control-panel"
+          />
+        </svg>
+      </div>
 
       <footer className="App-footer">
         <p>

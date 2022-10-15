@@ -60,3 +60,20 @@ body::before {
   height: 170px;
 }
 
+.control-panel-wrapper {
+  position: absolute;
+  bottom: 20vh;
+  left: 0;
+  right: 0;
+}
+
+.control-panel-svg {
+  width: 500px;
+  height: 200px;
+}
+
+.control-panel {
+  fill:	#71797E;
+  stroke: black;
+  stroke-width: 4;
+}
