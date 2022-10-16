@@ -62,14 +62,9 @@ body::before {
 
 .control-panel-wrapper {
   position: absolute;
-  bottom: 20vh;
+  bottom: 0;
   left: 0;
   right: 0;
-}
-
-.control-panel-svg {
-  width: 500px;
-  height: 200px;
 }
 
 .control-panel {

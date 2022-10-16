@@ -1,10 +1,7 @@
 import './App.css';
+import ControlPanel from './ControlPanel';
 
 function App() {
-  const panelWide = 350
-  const panelSmall = 200
-  const panelHeight = 100
-
   return (
     <div className="App">
       <header className="App-header">
@@ -15,19 +12,7 @@ function App() {
 
       <img src="headshot.png" alt="frame" className="headshot" />
 
-      <div className="control-panel-wrapper">
-        <svg className="control-panel-svg">
-          <polygon
-            points={
-              `0,0 ` + // Top Left
-              `${panelWide},0 ` + // Top Right
-              `${panelWide / 2 + panelSmall / 2},${panelHeight} ` + // Bottom Right
-              `${panelWide / 2 - panelSmall / 2},${panelHeight} ` // Bottom Left
-            }
-            className="control-panel"
-          />
-        </svg>
-      </div>
+      <ControlPanel />
 
       <footer className="App-footer">
         <p>
