@@ -1,12 +1,11 @@
 import './App.css';
 import ControlPanel from './ControlPanel';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Welcome to Owen Flood</p>
-      </header>
+      <Header />
 
       <div className="App-body">{/* <p>MEEEE</p> */}</div>
 
