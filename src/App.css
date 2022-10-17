@@ -48,16 +48,3 @@ body::before {
   width: 125px;
   height: 170px;
 }
-
-.control-panel-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.control-panel {
-  fill:	#71797E;
-  stroke: black;
-  stroke-width: 4;
-}

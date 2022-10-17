@@ -1,4 +1,6 @@
-import "./App.css";
+import "./ControlPanel.css";
+import Next from "@iconscout/react-unicons/icons/uil-skip-forward";
+import Last from "@iconscout/react-unicons/icons/uil-step-backward";
 
 const ControlPanel = () => {
   const panelWide = 350;
@@ -8,14 +10,32 @@ const ControlPanel = () => {
   const standWidth = 70;
 
   return (
-    <div className="control-panel-wrapper">
+    <div
+      className="control-panel-wrapper"
+      style={{ height: standHeight + panelHeight * 0.75 }}
+    >
+      <div className="button-wrapper">
+        <div style={{ flex: 5 }} />
+
+        <div className="next-button">
+          <Last />
+        </div>
+
+        <div style={{ flex: 0.75 }} />
+
+        <div className="next-button">
+          <Next />
+        </div>
+
+        <div style={{ flex: 5 }} />
+      </div>
+
       <svg
         style={{
           width: panelWide,
           height: panelHeight + standHeight,
-          display: 'block',
-          margin: 'auto',
         }}
+        className="panel-svg"
       >
         <polygon
           points={
@@ -24,7 +44,7 @@ const ControlPanel = () => {
             `${panelWide / 2 + standWidth / 2},${panelHeight + standHeight} ` + // Bottom Right
             `${panelWide / 2 - standWidth / 2},${panelHeight + standHeight} ` // Bottom Left
           }
-          className="control-panel"
+          className="control-panel-polygon"
         />
 
         <polygon
@@ -34,7 +54,7 @@ const ControlPanel = () => {
             `${panelWide / 2 + panelSmall / 2},${panelHeight} ` + // Bottom Right
             `${panelWide / 2 - panelSmall / 2},${panelHeight} ` // Bottom Left
           }
-          className="control-panel"
+          className="control-panel-polygon"
         />
       </svg>
     </div>

@@ -1,0 +1,41 @@
+.control-panel-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.control-panel-polygon {
+  fill:	#71797E;
+  stroke: black;
+  stroke-width: 4;
+}
+
+.panel-svg {
+  position: inherit;
+  bottom: 0;
+  display: "block";
+  margin: "auto";
+}
+
+.button-wrapper {
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  justify-content: center;
+}
+
+.next-button {
+  flex: 0.5;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #DD1D1F;
+  border: solid 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
