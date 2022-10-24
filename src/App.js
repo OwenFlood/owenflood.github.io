@@ -1,21 +1,29 @@
+import { useState } from 'react';
+
 import './App.css';
 import ControlPanel from './ControlPanel';
 import Header from './Header';
 import Footer from './Footer';
+import Carousel from './Carousel';
+import { AppProvider } from "./appContext";
 
-function App() {
+const App = () => {
+  const [carousel, setCarousel] = useState(1)
+
   return (
-    <div className="App">
-      <Header />
+    <AppProvider value={{ carousel, setCarousel }}>
+      <div className="App">
+        <Header />
 
-      <div className="App-body">{/* <p>MEEEE</p> */}</div>
+        <Carousel />
 
-      <img src="headshot.png" alt="frame" className="headshot" />
+        <img src="headshot.png" alt="frame" className="headshot" />
 
-      <ControlPanel />
+        <ControlPanel />
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </AppProvider>
   );
 }
 

@@ -16,18 +16,6 @@
   color: black;
 }
 
-.App-body {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
 body::before {
   background-image: url("../public/background.jpg");
   content: "";

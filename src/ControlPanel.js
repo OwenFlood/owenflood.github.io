@@ -1,6 +1,9 @@
-import "./ControlPanel.css";
+import { useContext } from "react";
 import Next from "@iconscout/react-unicons/icons/uil-skip-forward";
 import Last from "@iconscout/react-unicons/icons/uil-step-backward";
+
+import "./ControlPanel.css";
+import AppContext from "./appContext";
 
 const ControlPanel = () => {
   const panelWide = 350;
@@ -8,6 +11,8 @@ const ControlPanel = () => {
   const panelHeight = 100;
   const standHeight = 80;
   const standWidth = 70;
+
+  const { carousel, setCarousel } = useContext(AppContext);
 
   return (
     <div
@@ -17,13 +22,13 @@ const ControlPanel = () => {
       <div className="button-wrapper">
         <div style={{ flex: 5 }} />
 
-        <div className="next-button">
+        <div className="next-button" onClick={() => setCarousel(carousel - 1)}>
           <Last />
         </div>
 
         <div style={{ flex: 0.75 }} />
 
-        <div className="next-button">
+        <div className="next-button" onClick={() => setCarousel(carousel + 1)}>
           <Next />
         </div>
 
