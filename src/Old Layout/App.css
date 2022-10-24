@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.App-footer {
+  position:fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  font-size: 8px;
+  opacity: 0.5;
+  color: black;
+}
+
+body::before {
+  background-image: url("../public/background.jpg");
+  content: "";
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: .4;
+}
+
+.headshot {
+  position: absolute;
+  top: 15vh;
+  right: 4vw;
+  width: 125px;
+  height: 170px;
+}
