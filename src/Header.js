@@ -2,24 +2,33 @@ import "./Header.css";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
 import Microsoft from "@iconscout/react-unicons/icons/uil-microsoft";
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <header className="App-header">
-    <div className="header-padding" />
+    <div className="header-left">
+      <Link className="header-link" to="about-me">
+        About Me
+      </Link>
 
-    <div className="header-text">
-      <p>Welcome to Owen Flood</p>
+      <div className="header-link">My Projects</div>
     </div>
 
-    <div className="socials">
-      <a href="https://github.com/OwenFlood">
-        <Github />
+    <div className="header-right">
+      <a className="header-link social" href="https://github.com/OwenFlood">
+        <Github size="100%" />
       </a>
-      <a href="https://www.linkedin.com/in/owen-flood/">
-        <Linkedin />
+      <a
+        className="header-link social"
+        href="https://www.linkedin.com/in/owen-flood/"
+      >
+        <Linkedin size="100%" />
       </a>
-      <a href="https://marketplace.visualstudio.com/publishers/owen-flood">
-        <Microsoft />
+      <a
+        className="header-link social"
+        href="https://marketplace.visualstudio.com/publishers/owen-flood"
+      >
+        <Microsoft size="100%" />
       </a>
     </div>
   </header>
