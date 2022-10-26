@@ -5,6 +5,7 @@ import './App.css';
 import Header from './Header';
 import NotFound from './NotFound'
 import { AppProvider } from "./appContext";
+import AboutMe from './AboutMe';
 
 const AppRoot = () => (
   <div className="App">
@@ -26,7 +27,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/about-me",
-        element: <div>Hello world!</div>,
+        element: <AboutMe />,
       },
       {
         path: "/projects",
