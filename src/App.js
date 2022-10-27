@@ -6,6 +6,7 @@ import Header from './Header';
 import NotFound from './NotFound'
 import { AppProvider } from "./appContext";
 import AboutMe from './AboutMe';
+import Projects from './Projects';
 
 const AppRoot = () => (
   <div className="App">
@@ -31,7 +32,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/projects",
-        element: <div>Goodbye world!</div>,
+        element: <Projects />,
       },
     ],
   },

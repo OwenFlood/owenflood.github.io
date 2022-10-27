@@ -11,7 +11,9 @@ const Header = () => (
         About Me
       </Link>
 
-      <div className="header-link">My Projects</div>
+      <Link className="header-link" to="projects">
+        My Projects
+      </Link>
     </div>
 
     <div className="header-right">
