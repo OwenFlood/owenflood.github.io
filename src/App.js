@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Outlet, Navigate } from "react-router-dom";
 
 import './App.css';
-import "@fontsource/montserrat";
 import Header from './Header';
 import NotFound from './NotFound'
 import { AppProvider } from "./appContext";
