@@ -1,13 +1,13 @@
-import { AnimateSharedLayout, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import "./Projects.css";
 import projects from './project-data'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ title, mediaPath, setHoverId, blur, index }) => {
+const ProjectCard = ({ title, mediaPath, setHoverId, blur, id }) => {
   const variants = {
     blurred: { filter: "blur(3px)", backdropFilter: "blur(5px)" },
-    // : { opacity: 0, x: "-100%" },
   };
 
   return (
@@ -20,30 +20,30 @@ const ProjectCard = ({ title, mediaPath, setHoverId, blur, index }) => {
       }}
       animate={blur ? "blurred" : ""}
       variants={variants}
-      onMouseEnter={() => setHoverId(index)}
-      onMouseLeave={() => setHoverId(null)}
+      onMouseEnter={() => setHoverId(id)}
+      onMouseLeave={() => setHoverId(0)}
     >
-      <h1>{title}</h1>
+      <Link to={`/projects/${id}`}>
+        <h1>{title}</h1>
+      </Link>
     </motion.div>
   );
 };
 
 export default function Projects() {
-  const [hoverId, setHoverId] = useState(null);
+  const [hoverId, setHoverId] = useState(0);
 
   return (
     <div className="projects-container">
-      <AnimateSharedLayout>
-        {projects.map((props, id) => (
-          <ProjectCard
-            {...props}
-            index={id}
-            key={id}
-            setHoverId={setHoverId}
-            blur={hoverId !== null && hoverId !== id}
-          />
-        ))}
-      </AnimateSharedLayout>
+      {projects.map(({ id, ...props }) => (
+        <ProjectCard
+          {...props}
+          id={id}
+          key={id}
+          setHoverId={setHoverId}
+          blur={hoverId && hoverId !== id}
+        />
+      ))}
     </div>
   );
 }

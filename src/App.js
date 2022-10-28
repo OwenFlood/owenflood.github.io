@@ -7,6 +7,7 @@ import NotFound from './NotFound'
 import { AppProvider } from "./appContext";
 import AboutMe from './AboutMe';
 import Projects from './Projects';
+import ProjectScreen from './ProjectScreen';
 
 const AppRoot = () => (
   <div className="App">
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "projects/:projectId",
+        element: <ProjectScreen />,
       },
     ],
   },

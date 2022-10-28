@@ -6,3 +6,8 @@ body {
 .App {
   text-align: center;
 }
+
+.App a, .App a:visited {
+  color: inherit;
+  text-decoration: none;
+}
