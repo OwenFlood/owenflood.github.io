@@ -1,11 +1,12 @@
 const projects = [
   {
     title: "Aeroponic Farm",
-    thumbnail: "aeroponic"
+    mediaPath: "aeroponics",
   },
   {
     title: "Robotic Hand",
+    mediaPath: "robotic-hand",
   },
-]
+];
 
 export default projects

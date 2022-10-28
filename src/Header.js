@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 const Header = () => (
   <header className="App-header">
     <div className="header-left">
-      <Link className="header-link" to="about-me">
-        About Me
+      <Link className="header-link header-link-bold" to="about-me">
+        Owen Flood
       </Link>
 
       <Link className="header-link" to="projects">
-        My Projects
+        Projects
       </Link>
     </div>
 

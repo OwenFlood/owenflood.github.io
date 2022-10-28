@@ -8,10 +8,18 @@
 
 .project-card {
   display: flex;
-  background-color: red;
   width: 26vw;
   height: 30vh;
   margin: 2vh;
   justify-content: center;
   align-items: center;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+.project-card h1 {
+  background-color: #F4F8FA;
+  padding: 0.5vw;
+  border-radius: 7px;
+  box-shadow: -5px 5px 5px #4b4b4b;
 }

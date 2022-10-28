@@ -4,8 +4,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(10px + 2vmin);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   color: black;
+}
+
+.App-header a, .App-header a:visited {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.04375em;
 }
 
 .header-left {
@@ -14,6 +22,12 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 2vw;
+}
+
+.header-link-bold {
+  font-weight: 900;
+  font-size: calc(15px + 2vmin);
+  margin-right: 3vw;
 }
 
 .header-right {
