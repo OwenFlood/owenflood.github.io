@@ -8,19 +8,20 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import './ProjectScreen.css'
 import projects from './project-data.js'
-import stuff from './projects/aeroponic.md'
+import markdownFiles from './projects/index.js'
 
 export default function ProjectScreen() {
-  const { projectId } = useParams();
-  const project = projects.find(({ id }) => id === Number(projectId));
-
   const [projectContent, setProjectContent] = useState('')
 
+  const { projectId } = useParams();
+  const project = projects.find(({ id }) => id === Number(projectId)); // Will use this in the future for changing page title and favicon possibly
+  const projectMarkdown = markdownFiles[projectId]
+
   useEffect(() => {
-    fetch(stuff)
-      .then(res => res.text())
+    fetch(projectMarkdown)
+      .then((res) => res.text())
       .then(setProjectContent);
-  }, []);
+  }, [projectMarkdown]);
 
   return (
     <div className="markdown-wrapper">
