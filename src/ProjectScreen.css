@@ -1,0 +1,9 @@
+.markdown-wrapper {
+  font-family: BlinkMacSystemFont,"Apple Color Emoji";
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
