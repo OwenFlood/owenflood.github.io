@@ -5,28 +5,33 @@ import projects from './project-data'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ title, mediaPath, setHoverId, blur, id }) => {
+const ProjectCard = ({ title, mediaPath, setHoverId, blur, hovered, id }) => {
   const variants = {
     blurred: { filter: "blur(3px)", backdropFilter: "blur(5px)" },
   };
 
   return (
-    <motion.div
-      style={{ backgroundImage: `url(${mediaPath}/thumb.jpg)` }}
-      className="project-card"
-      whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.3 },
-      }}
-      animate={blur ? "blurred" : ""}
-      variants={variants}
-      onMouseEnter={() => setHoverId(id)}
-      onMouseLeave={() => setHoverId(0)}
-    >
-      <Link to={`/projects/${id}`}>
-        <h1>{title}</h1>
-      </Link>
-    </motion.div>
+    <Link to={`/projects/${id}`}>
+      <motion.div
+        style={{ backgroundImage: `url(${mediaPath}/thumb.jpg)` }}
+        className="project-card"
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.3 },
+        }}
+        animate={blur ? "blurred" : ""}
+        variants={variants}
+        onMouseEnter={() => setHoverId(id)}
+        onMouseLeave={() => setHoverId(0)}
+      >
+        <motion.h1
+          animate={hovered ? "hide" : ""}
+          variants={{ hide: { opacity: 0 } }}
+        >
+          {title}
+        </motion.h1>
+      </motion.div>
+    </Link>
   );
 };
 
@@ -41,6 +46,7 @@ export default function Projects() {
           id={id}
           key={id}
           setHoverId={setHoverId}
+          hovered={hoverId === id}
           blur={hoverId && hoverId !== id}
         />
       ))}
