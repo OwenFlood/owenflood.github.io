@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { createBrowserRouter, RouterProvider, Outlet, Navigate } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 
 import './App.css';
 import Header from './Header';
