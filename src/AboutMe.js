@@ -19,7 +19,7 @@ export default function AboutMe() {
       <p className="blurb">
         My biggest goal is to use my skills and abilities to contribute towards
         making the world a more equitable and just place. I love bringing people
-        together from diverse backgrounds to solve pressing issues, whether it's
+        together from diverse backgrounds to solve issues. Whether it's
         serving as the president of Drexel Hack4Impact building software for
         nonprofits and leading boot camps for beginner programmers, or working
         with the Drexel Urban Growers to build and implement affordable
