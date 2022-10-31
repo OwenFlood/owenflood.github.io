@@ -43,3 +43,9 @@
 .social {
   width: 3vw;
 }
+
+@media (max-width: 880px){
+  .social {
+    width: calc(15px + 4vw);
+  } 
+}
