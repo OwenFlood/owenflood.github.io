@@ -17,16 +17,25 @@ const Header = () => (
     </div>
 
     <div className="header-right">
-      <a className="header-link social" href="https://github.com/OwenFlood">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="header-link social"
+        href="https://github.com/OwenFlood"
+      >
         <Github size="100%" />
       </a>
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className="header-link social"
         href="https://www.linkedin.com/in/owen-flood/"
       >
         <Linkedin size="100%" />
       </a>
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className="header-link social"
         href="https://marketplace.visualstudio.com/publishers/owen-flood"
       >
