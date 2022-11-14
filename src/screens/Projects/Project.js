@@ -6,9 +6,9 @@ import remarkGemoji from "remark-gemoji";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import './ProjectScreen.css'
-import projects from './project-data.js'
-import markdownFiles from './projects/index.js'
+import './Project.css'
+import projects from 'projects/project-data'
+import markdownFiles from 'projects/index.js'
 
 export default function ProjectScreen() {
   const [projectContent, setProjectContent] = useState('')

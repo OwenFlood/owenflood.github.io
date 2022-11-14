@@ -10,9 +10,9 @@ import './App.css';
 import Header from './Header';
 import NotFound from './NotFound'
 import { AppProvider } from "./appContext";
-import AboutMe from './AboutMe';
-import Projects from './Projects';
-import ProjectScreen from './ProjectScreen';
+import AboutMe from './screens/AboutMe';
+import Projects from './screens/Projects';
+import ProjectScreen from './screens/Projects/Project';
 
 const AppRoot = () => (
   <div className="App">

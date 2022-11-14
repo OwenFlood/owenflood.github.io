@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 import "./Projects.css";
-import projects from './project-data'
+import projects from 'projects/project-data'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
